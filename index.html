@@ -40,6 +40,14 @@
             display: none
         }
 
+        .mySlidesTr {
+            display: none
+        }
+
+        .mySlidesPide {
+            display: none
+        }
+
 
         #inner {
             display: table;
@@ -112,6 +120,28 @@
 
         /* The dots/bullets/indicators */
         .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .dotTr {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .dotPide {
             cursor: pointer;
             height: 15px;
             width: 15px;
@@ -463,8 +493,8 @@
                     <div class="columns portfolio-item">
                         <div class="item-wrap">
 
-                            <a href="#modal-01" title="">
-                                <img alt="" src="images/portfolio/coffee.jpg">
+                            <a href="#modal-01" onclick="javascript:resetIndex()" title="">
+                                <img alt="" src="images/portfolio/taxi/t1.png">
                                 <div class="overlay">
                                     <div class="portfolio-item-meta">
                                         <h5>Taxi App</h5>
@@ -484,8 +514,8 @@
                         <div class="columns portfolio-item">
                             <div class="item-wrap">
 
-                                <a href="#modal-01" title="">
-                                    <img alt="" src="images/portfolio/coffee.jpg">
+                                <a href="#modal-02" onclick="javascript:resetIndexPide()" title="">
+                                    <img alt="" src="images/portfolio/pideexpress/p1.png">
                                     <div class="overlay">
                                         <div class="portfolio-item-meta">
                                             <h5>Pide Express</h5>
@@ -504,8 +534,8 @@
                             <div class="columns portfolio-item">
                                 <div class="item-wrap">
 
-                                    <a href="#modal-01" title="">
-                                        <img alt="" src="images/portfolio/coffee.jpg">
+                                    <a href="#modal-03" onclick="javascript:resetIndexTr()" title="">
+                                        <img alt="" src="images/portfolio/tracker/tr1.png">
                                         <div class="overlay">
                                             <div class="portfolio-item-meta">
                                                 <h5>Wing GPS</h5>
@@ -533,19 +563,30 @@
                         <div class="slideshow-container">
 
                             <div class="mySlides fade">
-                                <div class="numbertext">1 / 3</div>
-                                <img src="images/portfolio/modals/m-coffee.jpg" style="width:100%">
+                                <div class="numbertext">1 / 6</div>
+                                <img src="images/portfolio/taxi/t1.png" style="width:100%">
+                            </div>
+                            <div class="mySlides fade">
+                                <div class="numbertext">2 / 6</div>
+                                <img src="images/portfolio/taxi/t2.png" style="width:100%">
+                            </div>
+                            <div class="mySlides fade">
+                                <div class="numbertext">3 / 6</div>
+                                <img src="images/portfolio/taxi/t3.png" style="width:100%">
+                            </div>
+                            <div class="mySlides fade">
+                                <div class="numbertext">4 / 6</div>
+                                <img src="images/portfolio/taxi/t4.png" style="width:100%">
+                            </div>
+                            <div class="mySlides fade">
+                                <div class="numbertext">5 / 6</div>
+                                <img src="images/portfolio/taxi/t5.png" style="width:100%">
+                            </div>
+                            <div class="mySlides fade">
+                                <div class="numbertext">6 / 6</div>
+                                <img src="images/portfolio/taxi/t6.png" style="width:100%">
                             </div>
 
-                            <div class="mySlides fade">
-                                <div class="numbertext">2 / 3</div>
-                                <img src="images/portfolio/modals/m-coffee.jpg" style="width:100%">
-                            </div>
-
-                            <div class="mySlides fade">
-                                <div class="numbertext">3 / 3</div>
-                                <img src="images/portfolio/modals/m-coffee.jpg" style="width:100%">
-                            </div>
 
                             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                             <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -557,15 +598,18 @@
                             <span class="dot" onclick="currentSlide(1)"></span>
                             <span class="dot" onclick="currentSlide(2)"></span>
                             <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlide(5)"></span>
+                            <span class="dot" onclick="currentSlide(6)"></span>
+
                         </div>
 
 
                         <div class="description-box">
-                            <h4>Coffee Cup</h4>
-                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
-                                auctor,
-                                nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                            <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
+                            <h4>Taxi App</h4>
+                            <p>Developed in Flutter using Google Maps, Firebase Authentication, Firebase Push
+                                Notifications and
+                                Firebase Firestore.</p>
                         </div>
 
                         <div class="link-box" id="outer">
@@ -573,6 +617,126 @@
                         </div>
 
                     </div><!-- modal-01 End -->
+
+
+
+                    <!-- Modal Popup
+                                        	      --------------------------------------------------------------- -->
+
+                    <div id="modal-02" class="popup-modal mfp-hide">
+                        <!--
+                                                        <img class="scale-with-grid" src="images/portfolio/modals/m-coffee.jpg" alt="" />
+                                                        -->
+                        <div class="slideshow-container">
+
+                            <div class="mySlidesPide fade">
+                                <div class="numbertext">1 / 6</div>
+                                <img src="images/portfolio/pideexpress/p1.png" style="width:100%">
+                            </div>
+                            <div class="mySlidesPide fade">
+                                <div class="numbertext">2 / 6</div>
+                                <img src="images/portfolio/pideexpress/p2.png" style="width:100%">
+                            </div>
+                            <div class="mySlidesPide fade">
+                                <div class="numbertext">3 / 6</div>
+                                <img src="images/portfolio/pideexpress/p3.png" style="width:100%">
+                            </div>
+                            <div class="mySlidesPide fade">
+                                <div class="numbertext">4 / 6</div>
+                                <img src="images/portfolio/pideexpress/p4.png" style="width:100%">
+                            </div>
+                            <div class="mySlidesPide fade">
+                                <div class="numbertext">5 / 6</div>
+                                <img src="images/portfolio/pideexpress/p5.png" style="width:100%">
+                            </div>
+                            <div class="mySlidesPide fade">
+                                <div class="numbertext">6 / </div>
+                                <img src="images/portfolio/pideexpress/p6.png" style="width:100%">
+                            </div>
+                            <div class="mySlidesPide fade">
+                                <div class="numbertext">6 / </div>
+                                <img src="images/portfolio/pideexpress/p7.png" style="width:100%">
+                            </div>
+
+
+                            <a class="prev" onclick="plusSlidesPide(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlidesPide(1)">&#10095;</a>
+
+                        </div>
+                        <br>
+
+                        <div style="text-align:center">
+                            <span class="dotPide" onclick="currentSlidePide(1)"></span>
+                            <span class="dotPide" onclick="currentSlidePide(2)"></span>
+                            <span class="dotPide" onclick="currentSlidePide(3)"></span>
+                            <span class="dotPide" onclick="currentSlidePide(4)"></span>
+                            <span class="dotPide" onclick="currentSlidePide(5)"></span>
+                            <span class="dotPide" onclick="currentSlidePide(6)"></span>
+                            <span class="dotPide" onclick="currentSlidePide(7)"></span>
+
+                        </div>
+
+
+                        <div class="description-box">
+                            <h4>Taxi App</h4>
+                            <p>Developed in Flutter using Google Maps, Firebase Authentication, Firebase Push
+                                Notifications and
+                                Firebase Firestore.</p>
+                        </div>
+
+                        <div class="link-box" id="outer">
+                            <a class="popup-modal-dismiss" id="inner">Close</a>
+                        </div>
+
+                    </div><!-- modal-01 End -->
+
+
+
+                    <!-- Modal Popup 3
+                                        	      --------------------------------------------------------------- -->
+
+                    <div id="modal-03" class="popup-modal mfp-hide">
+                        <!--
+                                                        <img class="scale-with-grid" src="images/portfolio/modals/m-coffee.jpg" alt="" />
+                                                        -->
+                        <div class="slideshow-container">
+
+                            <div class="mySlidesTr fade">
+                                <div class="numbertext">1 / 2</div>
+                                <img src="images/portfolio/tracker/tr1.png" style="width:100%">
+                            </div>
+                            <div class="mySlidesTr fade">
+                                <div class="numbertext">2 / 2</div>
+                                <img src="images/portfolio/tracker/tr2.png" style="width:100%">
+                            </div>
+
+
+
+                            <a class="prev" onclick="plusSlidesTr(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlidesTr(1)">&#10095;</a>
+
+                        </div>
+                        <br>
+
+                        <div style="text-align:center">
+                            <span class="dotTr" onclick="currentSlideTr(1)"></span>
+                            <span class="dotTr" onclick="currentSlideTr(2)"></span>
+
+                        </div>
+
+
+                        <div class="description-box">
+                            <h4>Taxi App</h4>
+                            <p>Developed in Flutter using Google Maps, Firebase Authentication, Firebase Push
+                                Notifications and
+                                Firebase Firestore.</p>
+                        </div>
+
+                        <div class="link-box" id="outer">
+                            <a class="popup-modal-dismiss" id="inner">Close</a>
+                        </div>
+
+                    </div><!-- modal-03 End -->
 
                 </div> <!-- row End -->
 
@@ -643,8 +807,20 @@
         var slideIndex = 1;
         showSlides(slideIndex);
 
+        function resetIndex() {
+            slideIndex = 1;
+            showSlides(slideIndex);
+        }
+
         function plusSlides(n) {
-            showSlides(slideIndex += n);
+            slideIndex += n;
+            if (slideIndex < 1) {
+                slideIndex = 6;
+            }
+            if (slideIndex > 6) {
+                slideIndex = 1;
+            }
+            showSlides(slideIndex);
         }
 
         function currentSlide(n) {
@@ -666,7 +842,98 @@
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
         }
+
     </script>
+
+
+
+    <script>
+
+        var slideIndexPide = 1;
+        showSlidesPide(slideIndexPide);
+
+        function resetIndexPide() {
+            slideIndexPide = 1;
+            showSlidesPide(slideIndexPide);
+        }
+
+        function plusSlidesPide(n) {
+            slideIndexPide += n;
+            if (slideIndexPide < 1) {
+                slideIndexPide = 7;
+            }
+            if (slideIndexPide > 7) {
+                slideIndexPide = 1;
+            }
+            showSlidesPide(slideIndexPide);
+        }
+
+        function currentSlidePide(n) {
+            showSlidesPide(slideIndexPide = n);
+        }
+
+        function showSlidesPide(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlidesPide");
+            var dots = document.getElementsByClassName("dotPide");
+            if (n > slides.length) { slideIndexPide = 1 }
+            if (n < 1) { slideIndexPide = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndexPide - 1].style.display = "block";
+            dots[slideIndexPide - 1].className += " active";
+        }
+
+    </script>
+
+
+    <script>
+
+        var slideIndexTr = 1;
+        showSlidesTr(slideIndexTr);
+
+        function resetIndexTr() {
+            slideIndexTr = 1;
+            showSlidesTr(slideIndexTr);
+        }
+
+        function plusSlidesTr(n) {
+            slideIndexTr += n;
+            if (slideIndexTr < 1) {
+                slideIndexTr = 2;
+            }
+            if (slideIndexTr > 2) {
+                slideIndexTr = 1;
+            }
+            showSlidesTr(slideIndexTr);
+        }
+
+        function currentSlideTr(n) {
+            showSlidesTr(slideIndexTr = n);
+        }
+
+        function showSlidesTr(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlidesTr");
+            var dots = document.getElementsByClassName("dotTr");
+            if (n > slides.length) { slideIndexTr = 1 }
+            if (n < 1) { slideIndexTr = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndexTr - 1].style.display = "block";
+            dots[slideIndexTr - 1].className += " active";
+        }
+
+    </script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
     <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
